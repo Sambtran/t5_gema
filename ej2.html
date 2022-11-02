@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function creartabla(row=10,columns=4,color = "black"){
+            document.write('<table style="border: 3px solid '+color+';" >');
+            for (let fila = 1; fila <= row; fila++) {
+                document.write("<tr>")
+                    for (let linea = 1; linea <= columns; linea++) {
+                        document.write('<td  style="border: 1px solid '+color+';"> alberto </td>');
+                    }
+                document.write("</tr>")
+            }
+            document.write("</table>")
+        }
+        var t = prompt("cuantas tablas quieres")
+        var x = prompt("cuantas filas deseas")
+        var y = prompt("cuantas columnas quieres")
+        var c =prompt("Que color quieres CON LETRAS")
+        if(  isNaN(t) || isNaN(x) || isNaN(y) || c == ''){
+            creartabla()
+        }
+        else{
+        for (let i = 0; i < t; i++) {
+            creartabla(x,y,c)
+            
+        }
+        }
+    </script>
+</body>
+</html>

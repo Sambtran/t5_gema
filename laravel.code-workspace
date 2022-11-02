@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "../../../../opt/lampp/htdocs/laravel"
+		},
+		{
+			"path": "../cafe"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "../quique::1"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "quique::1"
+	}
+}
