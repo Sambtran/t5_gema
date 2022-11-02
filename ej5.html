@@ -7,6 +7,58 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <script>
+        function contador(lista){
+            var n1
+            var mapa = new Map()
+            var palabrash = []
+            var centinela = false;
+            for (let i = 0; i < lista.length; i++) {
+                let palabra = lista[i];
+                n1 = 0;
+                for (let i2 = 0; i2 < lista.length; i2++) {
+                    var centinela = false;
+                    for (let i3 = 0; i3 < palabrash.length; i3++) {
+                        if(palabra == palabrash[i3]){
+                            centinela = true;
+                        }
+                    }
+                        if(palabra == lista[i2]){
+                            n1++
+                        }
+                    
+                }
+                if(!centinela){
+                    mapa.set(palabra,n1)
+                }
+                palabrash.push(palabra)
+
+            }
+        console.log(n1)
+        console.log(lista)
+        console.log(palabrash)
+        console.log(mapa)
+        return mapa;
+        }
+        var lista2 = []
+        do{
+            var entrada = prompt("dame una palabra ")
+            console.log("entrada "+entrada)
+            if(!isNaN(entrada)){
+                if(entrada != null){
+                window.alert("error")
+            } }
+            else{
+                if(entrada != ""){
+                    lista2.push(entrada)
+                }
+            }
+        }while(entrada != null)
+        let resultados = contador(lista2)
+        for (var [key, value] of resultados) {
+            document.write("\n"+key + " = " + value);
+            }
+        
+    </script>
 </body>
 </html>

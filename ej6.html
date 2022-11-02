@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function fibonardo(n){
+        if(n == 1 || n == 0) {
+        return n;
+        }
+        else {
+            return (fibonardo(n-1) + fibonardo(n - 2))
+        }   
+    }
+    var centinela = false
+        do{
+            var entrada = prompt("que posición de fibonacci requieres")
+            if(isNaN(entrada)){
+                window.alert("error")
+            }
+            else{
+                true
+            }
+        }while(centinela)
+        document.write(fibonardo(entrada))
+    </script>
+</body>
+</html>

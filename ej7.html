@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function palindronardo(ora){
+            var fras = [];
+        const  ppass = /[^a-z0-9]/
+        ora = ora.toLowerCase();
+        console.log(ora.length)
+
+        for(let i =0; i< ora.length; i++){
+            console.log(ora.charAt(i))
+            console.log(ppass.test(ora.charAt(i)))
+            if(!ppass.test(ora.charAt(i))){
+                fras.push(ora.charAt(i))
+            }
+            else{
+            }
+        }
+        var fraset = fras.slice()
+        fras.reverse();
+        console.log(fraset)
+        var fraset2 = fraset.toString();
+        console.log(fras)
+        var fras2 = fras.toString();
+        console.log(fraset2)
+        console.log(fras2)
+        if(fraset2 == fras2){
+            return true
+        }
+        else{
+            return false
+        }
+    }
+    var centinela = false;
+    do{
+        let entrada = prompt("Give a string")
+        if(isNaN){
+            if(palindronardo(entrada)){
+                window.alert("ITS PALINDRONARDO")
+            }
+            else{
+                window.alert("ITS NOT PALINDRONARDO")
+            }
+        }
+        else{
+            if(entrada == null){
+                centinela = true
+            }
+            else{
+            window.alert("error")
+            }
+        }
+    }while(!centinela)
+    </script>
+</body>
+</html>
