@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function anagramardo(a,b){
+            // we pas the string to arrays
+            var aa = a.split("");
+            var ba = b.split("");
+            //we order the arrays using sort and a fucntion i get from https://stackoverflow.com/questions/8996963/how-to-perform-case-insensitive-sorting-array-of-string-in-javascript
+            //doing it not sensitive to upper case or lower cae
+            aa.sort(function (c, d) {
+                return c.toLowerCase().localeCompare(d.toLowerCase());
+            });
+            ba.sort(function (e, f) {
+                return e.toLowerCase().localeCompare(f.toLowerCase());
+            });
+            //once order we return to string
+            aa = aa.toString();
+            ba = ba.toString();
+            aa=aa.toLowerCase()
+            ba=ba.toLowerCase()
+
+            if(aa == ba){
+                return true
+            }
+            else{
+                return false
+            }
+        }
+        let entrada = prompt("give me the 1 word")
+        let entrada2 = prompt("give the 2 one")
+
+        if(anagramardo(entrada,entrada2)){
+            document.write("its anagram")
+        }
+        else{
+            document.write("its not anagram")
+        }
+    </script>
+</body>
+</html>

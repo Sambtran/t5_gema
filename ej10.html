@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //función callback con ayuda de  https://www.w3schools.com/js/js_callback.asp
+        function filtro(lista,callback){
+            var listadef = []
+            for(x of lista){
+                if(callback(x)){
+                    listadef.push(x)
+                }
+            }
+            console.log(listadef)
+            // comprobamos si la array tiene algun valor en caso de tenerlo significa que no ha pasado el filtro
+            // de este manera tambien esta preparado para devovler la array por si se quiere modificar el codigo
+            if(listadef.length > 0){
+                return true
+            }
+            else{
+                false
+            }
+        }
+        // array dinamica para probar el filtro
+        window.alert("llena un array de 4 numero")
+        const listaprueba = []
+        for (let i = 0; i < 4; i++) {
+            listaprueba.push(window.prompt("elemento "+i))
+        }
+        // la linea de debajo se creo en principio para poder crear filtros dinamicos con la funcion callback por razones que desconozco no acepta string como un operador, por razones de tiempo no he podido indagar en este problema
+        //const exp = window.prompt("Expresion para el filtro donde x es un cualquier elemento EJ x>4")
+        //console.log("lista = "+listaprueba)
+        //console.log("exp = " + exp)
+        if(filtro(listaprueba,(x) => x<0 /*En este espacio se pondira el valor exp si lo aceptara exp*/)){
+            document.write("true")
+        }
+        else{
+            document.write("false")
+        }
+    </script>
+    
+</body>
+</html>

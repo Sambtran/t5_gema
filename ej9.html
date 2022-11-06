@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //made by alberto Colomer template from  https://www.quora.com/How-do-you-code-a-tribonacci-sequence-in-JavaScript
+    // i cannot put the name tribonardo cause js just go crazy and  overflow the memory 
+    function tri(n){ 
+        //switch for matching what the tribonacci secuence require
+    switch (n) {
+        case 0:
+            return 0
+            break
+        case 1:
+            return 0
+            break
+        case 2:
+            return 1
+            break
+        default:
+            // we jsut add another -3 to the fibonacci code 
+        return tri(n-1) + tri(n-2) + tri(n-3); 
+    }
+    } 
+    //**same as fibonacci code
+    var centinela = false
+        do{
+            var entrada = prompt("que posición de tribonacci requieres")
+            if(isNaN(entrada)){
+                window.alert("error")
+            }
+            else{
+                true
+            }
+        }while(centinela)
+        document.write(tri(entrada))
+    </script>
+</body>
+</html>

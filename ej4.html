@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title>Words</title>
+</head>
+<body>
+ <script>
+const setWords=new Set();
+    var arrayWords=[];
+    //commented by Albertonardo
+    //we prompt a word and while is not empty we enter the loop
+    var word=prompt("Write a word ,or leave it empty if you want to finish");
+    while(word !=null && word!=""){
+    setWords.add(word);
+    word=prompt("Write a word ,or leave it empty if you want to finish");
+        }
+        // here we copy the array set words
+        arrayWords=[...setWords];
+        // it eleminates the duplicated words in the local lenguage spanish with the arrow opreator 
+        arrayWords.sort((a,b)=>(-a.localeCompare(b,"es")));
+        //now we just show the array with a function to space every item in the array
+        arrayWords.forEach(function(w){
+        document.write(`<p>${w}</p>`);
+        })
+
+ </script>
+</body>
+</html>
